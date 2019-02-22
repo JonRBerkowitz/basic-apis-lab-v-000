@@ -1,7 +1,6 @@
 class RepositoriesController < ApplicationController
 
   def search
-
   end
 
   def github_search
@@ -11,6 +10,6 @@ class RepositoriesController < ApplicationController
       req.params['q'] = params[:query]
     end
     body_hash = JSON.parse(@resp.body)
-    render 'github_search'
+    render :search
   end
 end
